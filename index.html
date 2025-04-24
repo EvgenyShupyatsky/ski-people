@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ski People</title>
+  <link rel="icon" type="image/svg+xml" href="/image/ski.svg" />
   <link rel="stylesheet" href="/src/style.css">
+  <link rel="preload" href="/public/fonts/OpenSans-Regular.woff2" as="font" type="woff2" crossorigin>
+  <link rel="preload" href="/public/fonts/Inter.woff2" as="font" type="woff2" crossorigin>
+  <link rel="preload" href="/public/fonts/Inter-Black.woff2" as="font" type="woff2" crossorigin>
   <script type="module" src="/src/main.js"></script>
+  <title>Ski People</title>
 </head>
 
 <body>
@@ -20,8 +23,8 @@
 
         <a class="header__logo-link" href="/"
           title="Переход на главную страницу"
-          area-label="Переход на главную страницу">
-          <img class="header__logo-image" src="/img/logo.svg"
+          aria-label="Переход на главную страницу">
+          <img class="header__logo-image" src="/image/logo.svg"
             alt="Логотип компании Ski People">
         </a>
 
@@ -29,23 +32,26 @@
           <input class="header__search-input" type="search" name="search"
             placeholder="Введите запрос...">
           <button class="header__search-button" type="submit">
-            <img class="header__search-pictogram" src="/img/search-normal.svg" alt="Поиск по контексту">  
+            <img class="header__search-pictogram" src="/image/search-normal.svg" alt="Поиск по контексту">  
           </button>
         </form>
 
         <div class="header__links-list">
           <a class="header__link" href="/favorite">
             <span class="header__link-text">Избранное</span>
-            <img class="header__link-like" src="/img/heart_default.svg" alt="Перейти в избранное">
+            <img class="header__link-like" src="/image/heart_default.svg" alt="Перейти в избранное">
           </a>
 
           <a class="header__link" href="/cart">
             <span class="header__link-text">Корзина</span>
             <span class="header__link-count">(5)</span>
-            <img class="header__link-bag" src="/img/bag.svg" alt="Перейти в корзину покупателя">
+            <img class="header__link-bag" src="/image/bag.svg" alt="Перейти в корзину покупателя">
 
           </a>
         </div>
+
+        <!-- <img class="header__rectangle" src="/image/Rectangle_16.png" alt="Разделительная линия"> 
+        замена на border-bottom -->
 
       </div>
 
@@ -102,11 +108,11 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/skis1.png"
+                <img class="card__image" src="/image/skis1.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_active.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_active.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Горные лыжи</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -116,11 +122,25 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/skis2.png"
+                <img class="card__image" src="/image/skis2.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
+              </button>
+              <h3 class="card__title">Горные лыжи</h3>
+              <p class="card__price">5&nbsp;000&nbsp;₽</p>
+              <button class="card__button">В корзину</button>
+            </article>
+          </li>
+          <li class="goods__item">
+            <article class="goods__card card">
+              <a class="card__link" href="#">
+                <img class="card__image" src="/image/skis3.png"
+                  alt="Изображение товара основное">
+              </a>
+              <button class="card__like-button" type="button">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
                             <h3 class="card__title">Горные лыжи</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -130,25 +150,11 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/skis3.png"
+                <img class="card__image" src="/image/skis4.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
-              </button>
-                            <h3 class="card__title">Горные лыжи</h3>
-              <p class="card__price">5&nbsp;000&nbsp;₽</p>
-              <button class="card__button">В корзину</button>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card card">
-              <a class="card__link" href="#">
-                <img class="card__image" src="/img/skis4.png"
-                  alt="Изображение товара основное">
-              </a>
-              <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Горные лыжи "Новогодние"</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -158,25 +164,11 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/protection1.png"
-                  alt="Изображение товара основное">
-              </a>
-<button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
-              </button>
-                            <h3 class="card__title">Экипировка</h3>
-              <p class="card__price">5&nbsp;000&nbsp;₽</p>
-              <button class="card__button">В корзину</button>
-            </article>
-          </li>
-          <li class="goods__item">
-            <article class="goods__card card">
-              <a class="card__link" href="#">
-                <img class="card__image" src="/img/protection2.png"
+                <img class="card__image" src="/image/protection1.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Экипировка</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -186,11 +178,11 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/protection3.png"
+                <img class="card__image" src="/image/protection2.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Экипировка</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -200,11 +192,11 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/protection4.png"
+                <img class="card__image" src="/image/protection3.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Экипировка</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -214,11 +206,11 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/protection5.png"
+                <img class="card__image" src="/image/protection4.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Экипировка</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -228,11 +220,25 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/snowboard1.png"
+                <img class="card__image" src="/image/protection5.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
+              </button>
+              <h3 class="card__title">Экипировка</h3>
+              <p class="card__price">5&nbsp;000&nbsp;₽</p>
+              <button class="card__button">В корзину</button>
+            </article>
+          </li>
+          <li class="goods__item">
+            <article class="goods__card card">
+              <a class="card__link" href="#">
+                <img class="card__image" src="/image/snowboard1.png"
+                  alt="Изображение товара основное">
+              </a>
+              <button class="card__like-button" type="button">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Сноуборд</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -242,11 +248,11 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/snowboard2.png"
+                <img class="card__image" src="/image/snowboard2.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Сноуборд</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -256,11 +262,11 @@
           <li class="goods__item">
             <article class="goods__card card">
               <a class="card__link" href="#">
-                <img class="card__image" src="/img/snowboard3.png"
+                <img class="card__image" src="/image/snowboard3.png"
                   alt="Изображение товара основное">
               </a>
               <button class="card__like-button" type="button">
-                <img class="card__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+                <img class="card__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
               </button>
               <h3 class="card__title">Сноуборд</h3>
               <p class="card__price">5&nbsp;000&nbsp;₽</p>
@@ -271,7 +277,7 @@
         </ul>
         <div class="pagination">
           <div class="pagination__line">
-            <img class="pagination__image" src="/img/Pagination_line.png"
+            <img class="pagination__image" src="/image/Pagination_line.png"
               alt="Линия индикатор положения относительно полного списка товаров">
           </div>
           <div class="pagination__slider">
@@ -342,7 +348,7 @@
           </table>
           <button class="product__button" type="button">В корзину</button>
           <button class="product__like-button">
-            <img class="product__link-like" src="/img/heart_default.svg" alt="Отметить, как избранное">
+            <img class="product__link-like" src="/image/heart_default.svg" alt="Отметить, как избранное">
           </button>
         </div>
       </div>
@@ -350,10 +356,11 @@
 
     <section class="cart">
       <div class="container">
+        <img class="cart__rectangle" src="/image/Rectangle_16.png" alt="Разделительная линия">
         <h2 class="cart__title">Корзина</h2>
         <ul class="cart__list">
           <li class="cart__item">
-            <img class="cart__item-img" src="/img/skis1_mini.png" alt="Уменьшенное изображение товара основное">
+            <img class="cart__item-image" src="/image/skis1_mini.png" alt="Уменьшенное изображение товара основное">
             <h3 class="cart__item-title">Горные Лыжи 1</h3>
             <p class="cart__item-price">5&nbsp;000&nbsp;₽</p>
             <p class="cart__item-id">арт.&nbsp;84348945757</p>
@@ -364,7 +371,7 @@
             </div>
           </li>
           <li class="cart__item">
-            <img class="cart__item-img" src="/img/snowboard2_mini.png" alt="Уменьшенное изображение товара основное">
+            <img class="cart__item-image" src="/image/snowboard2_mini.png" alt="Уменьшенное изображение товара основное">
             <h3 class="cart__item-title">Сноуборд 2</h3>
             <p class="cart__item-price">5&nbsp;000&nbsp;₽</p>
             <p class="cart__item-id">арт.&nbsp;84348945757</p>
@@ -375,7 +382,7 @@
             </div>
           </li>
           <li class="cart__item">
-            <img class="cart__item-img" src="/img/protection2_mini.png" alt="Уменьшенное изображение товара основное">
+            <img class="cart__item-image" src="/image/protection2_mini.png" alt="Уменьшенное изображение товара основное">
             <h3 class="cart__item-title">Экипировка 2</h3>
             <p class="cart__item-price">10&nbsp;000&nbsp;₽</p>
             <p class="cart__item-id">арт.&nbsp;84348945757</p>
@@ -401,6 +408,7 @@
           </p>
           <button class="cart__order-button" type="submit" form="cartForm">Оформить заказ</button>
         </div>
+        <img class="cart__rectangle" src="/image/Rectangle_16.png" alt="Разделительная линия">
         <form class="cart__form" action="#" id="cartForm" method="post">
           <h3 class="cart__form-title">Данные для доставки</h3>
           <fieldset class="cart__form-inputs">
@@ -486,7 +494,7 @@
     <div class="container">
       <a class="footer__logo-link" href="/" title="Переход на главную страницу"
         aria-label="Переход на главную страницу">
-        <img class="footer__logo-icon" src="/img/logo.svg"
+        <img class="footer__logo-icon" src="/image/logo.svg"
           alt="Логотип компании Ski People">
       </a>
       <p class="footer__comment">Этот учебный проект выполнен под руководством
@@ -494,7 +502,7 @@
         <a class="footer__link" href="https://methed.ru/" target="_blank">Methed
           (
           <img class="footer__icon"
-            src="https://methed.ru/resources/img/icons/favicon-32x32.png">
+            src="https://methed.ru/resources/img/icons/favicon-32x32.png" alt="Иконка школы Methed">
           )
         </a>
       </p>
@@ -575,6 +583,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
